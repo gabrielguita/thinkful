@@ -1,0 +1,55 @@
+<ul>
+  <li>
+    <strong>Test User</strong>
+  </li>
+  <li>
+    <small>@TestUser</small>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <h4>6</h4>
+            <small class="uppercase lighter">Tweets</small>
+          </td>
+          <td>
+            <h4>6</h4>
+            <small class="uppercase lighter">Following</small>
+          </td>
+          <td>
+            <h4>6</h4>
+            <small class="uppercase lighter">Followers</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <form>
+      <div class="mar-top-15">
+        <div>
+          <textarea placeholder="Compose new Tweet..."></textarea>
+        </div>
+        <input type="submit" value="Tweet">
+      </div>
+    </form>
+  </li>
+</ul>
+<ul>
+  <li><a href="#">Follow</a></li>
+  <li><a href="#">Tweet</a></li>
+</ul>
+<h4>Tweets</h4>
+<hr />
+<ol class="list-unstyled">
+  <div ng-repeat="tweet in tweets">
+    <li>
+      <strong>{{tweet.user.name}}</strong>
+      <small>@{{tweet.user.username}}</small>
+      <small>{{tweet.created_at</small>
+      <p>{{tweet.content}}
+    </li>
+    <li><hr></li>
+  </div>
+</ol>

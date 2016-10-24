@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="tweetful">
+<head>
+  <title>Tweetful</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="controllers/home.js"></script>
+  <script type="text/javascript" src="controllers/follows.js"></script>
+  <script type="text/javascript" src="controllers/tweets.js"></script>
+  <script type="text/javascript" src="controllers/home.js"></script>
+  <script type="text/javascript" src="controllers/team.js"></script>
+  <script type="text/javascript" src="controllers/about.js"></script>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo-link" href="/">
+      <span class="icon bird-topbar-blue"></span>
+    </a>
+    <button type="button">Sign out</button>
+  </nav>
+  <!--<%= notices %>-->
+  <div ng-view></div>
+</body>
+</html>
