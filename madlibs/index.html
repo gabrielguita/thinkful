@@ -18,30 +18,30 @@
     </div>
   </div>
 
-  <div ng-controller="madlibs" class="main_content">
+  <div ng-controller="madlibs as vm" class="main_content">
     <h3>Provide the following words</h3>
-    <table class="words">
+    <table class="words" ng-model="user">
       <tr>
-        <td><input type="text" ng-model="maleName" placeholder="Male name" /> </td>
-        <td><input type="text" ng-model="dirtyTask" placeholder="Dirty task" /> </td>
-        <td><input type="text" ng-model="obnoxiousCelebrity" placeholder="Obnoxious Celebrity" /> </td>
+        <td><input type="text" ng-model="vm.user.maleName" placeholder="Male name" /> </td>
+        <td><input type="text" ng-model="vm.user.dirtyTask" placeholder="Dirty task" /> </td>
+        <td><input type="text" ng-model="vm.user.obnoxiousCelebrity" placeholder="Obnoxious Celebrity" /> </td>
       </tr>
       <tr>
-        <td><input type="text" ng-model="jobTitle"  placeholder="Job Title" /> </td>
-        <td><input type="text" ng-model="celebrity"  placeholder="Celebrity" /> </td>
-        <td><input type="number" ng-model="hugeNumber"  placeholder="Huge Number" /> </td>
+        <td><input type="text" ng-model="vm.user.jobTitle" placeholder="Job Title" /> </td>
+        <td><input type="text" ng-model="vm.user.celebrity" placeholder="Celebrity" /> </td>
+        <td><input type="number" ng-model="vm.user.hugeNumber" placeholder="Huge Number" /> </td>
       </tr>
       <tr>
-        <td><input type="text" ng-model="tediousTask"  placeholder="Tedious Task" /> </td>
-        <td><input type="text" ng-model="uselessSkill"  placeholder="Useless Skill" /> </td>
-        <td><input type="text" ng-model="adjective"  placeholder="Adjective" /> </td>
+        <td><input type="text" ng-model="vm.user.tediousTask"  placeholder="Tedious Task" /> </td>
+        <td><input type="text" ng-model="vm.user.uselessSkill"  placeholder="Useless Skill" /> </td>
+        <td><input type="text" ng-model="vm.user.adjective"  placeholder="Adjective" /> </td>
       </tr>
     </table>
 
     <div class="description">
-          <p><span>{{maleName}}</span> was a <span>{{jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{maleName}}</span> met with her life mentor <span>{{celebrity}}</span> who told her to learn how to <span>{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so she studied programming instead. </p> 
+          <p><span>{{vm.user.maleName}}</span> was a <span>{{vm.user.jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{vm.user.tediousTask}}</span> and <span>{{vm.user.dirtyTask}}</span>. So, <span>{{vm.user.maleName}}</span> met with her life mentor <span>{{vm.user.celebrity}}</span> who told her to learn how to <span>{{vm.user.uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{vm.user.uselessSkill}}</span> so she studied programming instead. </p> 
 
-        <p>What a great decision! With her new skills, <span>{{maleName}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber}}</span> times faster. </p>
+        <p>What a great decision! With her new skills, <span>{{vm.user.maleName}}</span> built a(n) <span>{{vm.user.adjective}}</span> robot named <span>{{vm.user.obnoxiousCelebrity}}</span> that not only loved <span>{{vm.user.dirtyTask}}</span> but did it <span>{{vm.user.hugeNumber}}</span> times faster. </p>
     </div>
 
     </div>
