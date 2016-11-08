@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+  <script src="myApp.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body ng-app="myApp">
+ <div class="wrapper">
+  <div class="header">
+
+  <div ng-controller="waitstaff as vm" class="main_content"  >
+    <div class="inputScreen"  >
+      <h3>Waitstaff Calculator</h3>
+      <form name="myForm">
+        <div class="col left">
+          <h2>Enter the Meal Details</h2>
+
+          <label>Base Meal Price: $</label>
+          <input ng-model='vm.bill.baseMealPrice' /> 
+
+          <label>Taxe Rate: %</label>
+          <input ng-model='vm.bill.taxeRate' /> 
+
+          <label>Tip Percentage: %</label>
+          <input ng-model='vm.bill.TipPercentage' /> 
+
+          <button ng-click="vm.btnSubmit()">Submit</button>
+          <button ng-click="vm.btnReset()">Cancel</button>
+        </div>
+
+        <div class="col right">
+          
+          <div class="box">
+            <h2>Customer Charges</h2>
+
+            <p>Subtotal 0.00</p>
+            <p>Tip 0.00</p>
+            <p>Total 0.00</p>                        
+          </div>
+          <div class="box">
+            <h2>My Earnings Info</h2>
+            <p>Tip Total: 0.00</p>
+            <p>Meal count 0</p>
+            <p>Average Tip per Meal: 0.00</p>                        
+          </div>
+        </div>
+        <button ng-click="vm.btnReset()">Reset</button>
+
+    </div>
+  </div>
+</body>
+
+</html>

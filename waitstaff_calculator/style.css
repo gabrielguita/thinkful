@@ -96,7 +96,9 @@ span{
 
 .inputScreen{
     text-align: right;
-    padding: 0 50px;
+     
+        width: 100%;
+    display: inline-block;
 }
 
 button{
@@ -111,4 +113,25 @@ button{
 
 .inputScreen table{
     text-align: center;
+}
+
+
+/******/
+
+.col{
+    width: 50%;
+    float: left;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+.col.left{
+    border: solid 2px #000;
+}
+ 
+
+.box{
+    border: solid 2px #000;
+    min-height: 80px;
+    margin-bottom: 10px;
 }
