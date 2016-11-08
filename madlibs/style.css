@@ -91,4 +91,24 @@ span{
 	max-width: 87%;
 	margin: 0 auto;
 	padding-bottom: 40px;
+    text-align: right;
+}
+
+.inputScreen{
+    text-align: right;
+    padding: 0 50px;
+}
+
+button{
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.inputScreen button{
+    margin: 20px 0;
+}
+
+.inputScreen table{
+    text-align: center;
 }
