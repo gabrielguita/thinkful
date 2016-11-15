@@ -2,13 +2,15 @@
 <html>
 
 <head>
+<title>madlibs</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+  <script data-require="angular-animate@1.3.11" data-semver="1.3.11" src="https://code.angularjs.org/1.3.11/angular-animate.js"></script>
   <script src="myApp.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
-<body ng-app="myApp">
+<body ng-app="animateApp">
  <div class="wrapper">
   <div class="header">
     <a href="#" class="logo"><img src="mad-lib-happy-face.png" /></a>
@@ -42,8 +44,6 @@
           <button ng-click="vm.sendData()"  ng-disabled="myForm.$invalid">Generate My Mad Lib</button>
       </form>
     </div>
-
-
 
     <div class="description" ng-show="vm.inputScreen === false">
           <p><span>{{vm.user.maleName}}</span> was a <span>{{vm.user.jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{vm.user.tediousTask}}</span> and <span>{{vm.user.dirtyTask}}</span>. So, <span>{{vm.user.maleName}}</span> met with her life mentor <span>{{vm.user.celebrity}}</span> who told her to learn how to <span>{{vm.user.uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{vm.user.uselessSkill}}</span> so she studied programming instead. </p> 

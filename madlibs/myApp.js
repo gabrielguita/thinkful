@@ -1,5 +1,6 @@
+var app = angular.module('animateApp', ['ngAnimate'])
 
-angular.module('myApp', [])
+angular.module('animateApp', [])
 .controller('madlibs', ['$scope', function($scope) {
 
 	var vm = this;
@@ -7,7 +8,7 @@ angular.module('myApp', [])
 
 	vm.inputScreen = true;
 	vm.resultScreen = false;
-
+$scope.fade = false;
 	vm.sendData = function(){
 		vm.inputScreen = false;
 		vm.resultScreen = true;

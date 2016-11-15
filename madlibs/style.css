@@ -112,3 +112,45 @@ button{
 .inputScreen table{
     text-align: center;
 }
+
+
+.description {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  opacity: 1;
+}
+.fade {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  opacity: 0.2;
+}
+
+.inputScreen {   
+  transition: all linear 0.5s;
+}
+
+.inputScreen.ng-enter,
+.inputScreen.ng-leave.ng-leave-active {
+  max-height:0;
+}
+
+.inputScreen.ng-leave,
+.inputScreen.ng-enter.ng-enter-active {
+  max-height:1em;
+}
+
+.description {
+  transition: all linear 0.5s;
+}
+
+.description.ng-enter,
+.description.ng-leave.ng-leave-active {
+  max-height:0;
+}
+
+.description.ng-leave,
+.description.ng-enter.ng-enter-active {
+  max-height:1em;
+}
