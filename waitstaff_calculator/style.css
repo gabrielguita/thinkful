@@ -34,7 +34,7 @@ input{
 table{
     display: inline-table;
     width: 100%;
-    border-bottom: solid 2px;
+  
     padding-bottom: 60px;
 }
 
@@ -42,14 +42,13 @@ table{
 	max-width: 650px;
 	text-align: center;
 	margin: 80px auto;
-	border: solid 3px;
 }
 
 .header{
 	width: 100%;
 	display: inline-block;
 	clear: both;
-    border-bottom: solid 3px;
+   
     box-sizing: border-box;
 }
 
@@ -127,11 +126,82 @@ button{
 
 .col.left{
     border: solid 2px #000;
+   
 }
- 
+.col.right{
+    padding-left: 20px;
+}
 
 .box{
     border: solid 2px #000;
     min-height: 80px;
     margin-bottom: 10px;
+}
+
+.col{
+    box-sizing: border-box;
+    display: inline-block;
+     
+}
+
+.col h2{
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;a
+    display: inline-block;
+    border-bottom: solid 2px;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 15px;
+}
+
+.row{
+     margin-bottom: 10px;
+}
+
+
+/* table */
+.inputScreen h3{
+    text-align: center;
+}
+
+.calc tr td:nth-child(odd){
+    text-align: right;
+}
+.calc tr td:nth-child(even){
+    text-align: left;
+}
+
+button{
+    background: #fff;
+    border: solid 2px;
+    box-shadow: 3px 3px 0px 0px;
+    line-height: 20px;
+    padding: 2px 9px;
+    font-weight: normal;
+    letter-spacing: .5px;
+}
+
+button:hover{
+    background: #222;
+    color: #f2f2f2;
+    border: solid 2px #222;
+    box-shadow: 3px 3px 0px 0px;
+    cursor: pointer;
+}
+.calc tr td input{
+    max-width: 25px;
+}
+
+.calc.customer tr td:nth-child(odd){
+    width: 80px;
+}
+
+.calc tr:first-of-type td input{
+    max-width: 95px;
+}
+
+.calc.customer,
+.calc.earnings{
+    padding-bottom: 0;
 }

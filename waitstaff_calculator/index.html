@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>Waitingstaff Calculator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
   <script src="myApp.js"></script>
@@ -19,36 +20,68 @@
         <div class="col left">
           <h2>Enter the Meal Details</h2>
 
-          <label>Base Meal Price: $</label>
-          <input ng-model='vm.bill.baseMealPrice' /> 
-
-          <label>Taxe Rate: %</label>
-          <input ng-model='vm.bill.taxeRate' /> 
-
-          <label>Tip Percentage: %</label>
-          <input ng-model='vm.bill.TipPercentage' /> 
-
-          <button ng-click="vm.btnSubmit()">Submit</button>
-          <button ng-click="vm.btnReset()">Cancel</button>
+          <table class="calc">
+            <tr>
+              <td><label>Base Meal Price: $</label></td>
+              <td><input type="number"  ng-model='vm.bill.baseMealPrice' /></td>
+            </tr>
+            <tr>
+              <td><label>Taxe Rate: %</label></td>
+              <td><input type="number" ng-model='vm.bill.taxeRate' /></td>
+            </tr>
+            <tr>
+              <td><label>Tip Percentage: %</label></td>
+              <td><input type="number" ng-model='vm.bill.tipPergentage' /></td>
+            </tr>
+            <tr>
+              <td><button ng-disabled="myForm.$invalid" ng-click="vm.btnSubmit(1)">Submit</button></td>
+              <td><button ng-disabled="myForm.$invalid" ng-click="vm.btnCancel()">Cancel</button></td>
+            </tr>
+          </table>
         </div>
 
         <div class="col right">
           
           <div class="box">
-            <h2>Customer Charges</h2>
-
-            <p>Subtotal 0.00</p>
-            <p>Tip 0.00</p>
-            <p>Total 0.00</p>                        
-          </div>
+            <h2>Customer Charges</h2>     
+              <table class="calc customer" >
+                <tr>
+                  <td>Subtotal</td>
+                  <td>{{vm.bill.subTotal}}</td>
+                </tr>
+                <tr>
+                  <td>Tip</td>
+                  <td>{{vm.bill.tip}}</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td>{{vm.bill.total}}</td>
+                </tr>
+              </table>
+            </div>
           <div class="box">
-            <h2>My Earnings Info</h2>
-            <p>Tip Total: 0.00</p>
-            <p>Meal count 0</p>
-            <p>Average Tip per Meal: 0.00</p>                        
+
+
+          <table class="calc earnings">
+           <h2>My Earnings Info</h2>
+            <tr>
+              <td><label>Tip Total:</label></td>
+              <td>{{vm.bill.tipTotal}}</td>
+            </tr>
+            <tr>
+              <td><label>Meal count</label></td>
+              <td>{{vm.bill.mealCounter}}</td>
+            </tr>
+            <tr>
+              <td>Average Tip per Meal</td>
+              <td>{{vm.bill.averageTipPerMeal}}</td>
+            </tr>
+          </table>
+
+                             
           </div>
         </div>
-        <button ng-click="vm.btnReset()">Reset</button>
+        <button ng-click="vm.btnReset()" ng-disabled="myForm.$invalid">Reset</button>
 
     </div>
   </div>
