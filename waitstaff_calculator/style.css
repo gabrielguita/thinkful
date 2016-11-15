@@ -34,7 +34,7 @@ input{
 table{
     display: inline-table;
     width: 100%;
-  
+    border-bottom: solid 2px;
     padding-bottom: 60px;
 }
 
@@ -42,13 +42,14 @@ table{
 	max-width: 650px;
 	text-align: center;
 	margin: 80px auto;
+	border: solid 3px;
 }
 
 .header{
 	width: 100%;
 	display: inline-block;
 	clear: both;
-   
+    border-bottom: solid 3px;
     box-sizing: border-box;
 }
 
@@ -95,9 +96,7 @@ span{
 
 .inputScreen{
     text-align: right;
-     
-        width: 100%;
-    display: inline-block;
+    padding: 0 50px;
 }
 
 button{
@@ -115,93 +114,43 @@ button{
 }
 
 
-/******/
-
-.col{
-    width: 50%;
-    float: left;
-    min-height: 200px;
-    box-sizing: border-box;
+.description {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  opacity: 1;
+}
+.fade {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  opacity: 0.2;
 }
 
-.col.left{
-    border: solid 2px #000;
-   
-}
-.col.right{
-    padding-left: 20px;
+.inputScreen {   
+  transition: all linear 0.5s;
 }
 
-.box{
-    border: solid 2px #000;
-    min-height: 80px;
-    margin-bottom: 10px;
+.inputScreen.ng-enter,
+.inputScreen.ng-leave.ng-leave-active {
+  max-height:0;
 }
 
-.col{
-    box-sizing: border-box;
-    display: inline-block;
-     
+.inputScreen.ng-leave,
+.inputScreen.ng-enter.ng-enter-active {
+  max-height:1em;
 }
 
-.col h2{
-    text-align: left;
-    font-size: 20px;
-    width: 100%;
-    box-sizing: border-box;a
-    display: inline-block;
-    border-bottom: solid 2px;
-    padding: 10px 10px 10px 20px;
-    margin-bottom: 15px;
+.description {
+  transition: all linear 0.5s;
 }
 
-.row{
-     margin-bottom: 10px;
+.description.ng-enter,
+.description.ng-leave.ng-leave-active {
+  max-height:0;
 }
 
-
-/* table */
-.inputScreen h3{
-    text-align: center;
-}
-
-.calc tr td:nth-child(odd){
-    text-align: right;
-}
-.calc tr td:nth-child(even){
-    text-align: left;
-}
-
-button{
-    background: #fff;
-    border: solid 2px;
-    box-shadow: 3px 3px 0px 0px;
-    line-height: 20px;
-    padding: 2px 9px;
-    font-weight: normal;
-    letter-spacing: .5px;
-}
-
-button:hover{
-    background: #222;
-    color: #f2f2f2;
-    border: solid 2px #222;
-    box-shadow: 3px 3px 0px 0px;
-    cursor: pointer;
-}
-.calc tr td input{
-    max-width: 25px;
-}
-
-.calc.customer tr td:nth-child(odd){
-    width: 80px;
-}
-
-.calc tr:first-of-type td input{
-    max-width: 95px;
-}
-
-.calc.customer,
-.calc.earnings{
-    padding-bottom: 0;
+.description.ng-leave,
+.description.ng-enter.ng-enter-active {
+  max-height:1em;
 }
