@@ -205,3 +205,19 @@ button:hover{
 .calc.earnings{
     padding-bottom: 0;
 }
+
+.col{
+    position: relative;
+}
+.error{
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+
+}

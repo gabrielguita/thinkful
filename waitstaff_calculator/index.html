@@ -23,20 +23,22 @@
           <table class="calc">
             <tr>
               <td><label>Base Meal Price: $</label></td>
-              <td><input type="number"  ng-model='vm.bill.baseMealPrice' /></td>
+              <td><input type="number" required="" ng-model='vm.bill.baseMealPrice' /></td>
             </tr>
             <tr>
               <td><label>Taxe Rate: %</label></td>
-              <td><input type="number" ng-model='vm.bill.taxeRate' /></td>
+              <td><input type="number" required="" ng-model='vm.bill.taxeRate' /></td>
             </tr>
             <tr>
               <td><label>Tip Percentage: %</label></td>
-              <td><input type="number" ng-model='vm.bill.tipPergentage' /></td>
+              <td><input type="number" required="" ng-model='vm.bill.tipPergentage' /></td>
             </tr>
             <tr>
               <td><button ng-disabled="myForm.$invalid" ng-click="vm.btnSubmit(1)">Submit</button></td>
               <td><button ng-disabled="myForm.$invalid" ng-click="vm.btnCancel()">Cancel</button></td>
             </tr>
+
+            <span ng-show="myForm.$invalid" class="error">All Fields are required! </span>
           </table>
         </div>
 
