@@ -43,6 +43,9 @@ table{
 	text-align: center;
 	margin: 80px auto;
 }
+.wrapper p{
+    text-align: center;
+}
 
 .header{
 	width: 100%;
