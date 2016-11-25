@@ -1,7 +1,7 @@
 
 angular.module('myApp', ['ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/', {
+        $routeProvider.when('/', { //test
             templateUrl : 'home.html',
             controller : 'HomeCtrl',
             controllerAs: 'vm'
@@ -13,7 +13,7 @@ angular.module('myApp', ['ngRoute'])
         })
         .when('/my-earnings', {
             templateUrl : 'my-earnings.html',
-            controller : 'NewMealCtrl',
+            controller : 'MyEarningsCtrl',
         	controllerAs: 'vm'
         }).when('/error', {
 			template : '<p>Error - Page Not Found</p>'
@@ -23,9 +23,8 @@ angular.module('myApp', ['ngRoute'])
     .controller('HomeCtrl', [function() {
         //console.log('dasda');
     }])
-    .controller('NewMealCtrl', [function($scope) {
+    .controller('NewMealCtrl',  ['dataService', function(dataService) {
 		var vm = this;
-
 		vm.bill = {};
 		
 		vm.bill.subTotal = '0.00';
@@ -36,7 +35,8 @@ angular.module('myApp', ['ngRoute'])
 
 	 	vm.bill.mealCounter = 0;
 
-		vm.btnSubmit = function(mealCount, $scope){
+
+		vm.btnSubmit = function(mealCount){
 
 			vm.bill.percentValue = (vm.bill.taxeRate / 100) * vm.bill.baseMealPrice;
 
@@ -52,7 +52,8 @@ angular.module('myApp', ['ngRoute'])
 
 			vm.bill.averageTipPerMeal = vm.bill.tipTotal / vm.bill.mealCounter;	 
 			
-			$scope.$broadcast('billValue', vm.bill);
+			dataService.set(vm.bill);
+			//$scope.$broadcast('billValue', vm.bill);
 		}
 
 		vm.btnCancel = function () {
@@ -61,16 +62,17 @@ angular.module('myApp', ['ngRoute'])
 			vm.bill.tipPergentage = '';
 		}
     }])
-    .controller('MyEarningsCtrl', [function() {
+    .controller('MyEarningsCtrl', ['dataService', function(dataService) {
 
 		var vm = this;
 
-		vm.bill = {};
+		vm.bill = dataService.get();
 
-		$scope.$on('billValue', function(event, data){
-			vm.bill = data;
-		})
-
+		// $scope.$on('billValue', function(event, data){
+		// 	vm.bill = data;
+		// })
+		console.log(dataService.get());
+console.log(vm.bill);
 
     	vm.btnReset = function () {
 			vm.bill.subTotal = '0.00';
@@ -80,4 +82,17 @@ angular.module('myApp', ['ngRoute'])
 			vm.bill.averageTipPerMeal = '0.00';
 			vm.bill.mealCounter = 0;
 		}
-    }]);
+    }])
+    .factory('dataService', function(){
+    	var bill = {};
+
+    	return {
+    		get: function(){
+    			return bill;
+    		},
+    		set: function(value){
+    			bill = value;
+    		}
+    	}
+
+    });
