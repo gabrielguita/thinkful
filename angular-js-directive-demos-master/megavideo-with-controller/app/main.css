@@ -1,0 +1,11 @@
+.my-slider {
+	float: right;
+	width: 20%;
+}
+
+.mega-video-container {
+	margin:0 auto;
+	width:500px; 
+	border:2px solid black; 
+	padding:2em;
+}

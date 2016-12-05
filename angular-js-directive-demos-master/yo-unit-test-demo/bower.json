@@ -1,0 +1,27 @@
+{
+  "name": "yo-unit-test-demo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Thinkful/angular-js-directive-demos",
+  "authors": [
+    "Benjamin White <benjamin.e.white1@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.3.16"
+  }
+}

@@ -1,0 +1,8 @@
+<h1>100 Github Repos</h1>
+<ol>
+	<li ng-repeat="repo in popularRepos">
+		<p>
+			<a href="{{ repo.html_url }}" target="_blank"> {{ repo.name }}</a>: {{ repo.description }}
+		</p>
+	</li>
+</ol>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="authDemo1">
+<head>
+	<meta charset="UTF-8">
+	<title>Authentication Demo</title>
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="./bower_components/angular-route/angular-route.min.js"></script>
+	<script src="./app.js"></script>
+</head>
+<body ng-controller="MainController">
+	<h1>Angular Auth Demo</h1>
+	<hr />
+	<p>
+		<a href="/">Home</a> | 
+		<span ng-hide="loggedIn"><a href="/login">Login</a> |</span> 
+		<span ng-show="loggedIn"><a href="/logout">Logout</a> |</span>
+	</p>
+	<ng-view></ng-view>
+</body>
+</html>

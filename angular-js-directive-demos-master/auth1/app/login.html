@@ -1,0 +1,13 @@
+<p>This is the login page.</p>
+<form name='loginForm' ng-controller='LoginController as ctrl' ng-submit='loginForm.$valid && ctrl.login(username, password)'>
+	<p ng-if='ctrl.loginFailed'>Your username + password combination is invalid</p>
+	<div class='field'>
+		<label>Username: </label>
+		<input type='text' ng-model='username' name='username' />
+	</div>
+	<div class='field'>
+		<label>Password: </label>
+		<input type='password' ng-model='password' name='password' />
+	</div>
+	<input type="submit" value="Submit">
+</form>

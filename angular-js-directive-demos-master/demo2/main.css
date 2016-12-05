@@ -1,0 +1,16 @@
+.yo {
+	font-size: 8em;
+	font-style: italic;
+	text-align: center;
+}
+
+.yo  p {
+ 	font-size: .1em;
+ 	width: 25%;
+}
+
+.yo-llama {
+  background-image: url('./yo-llama.png');
+  width: 200px;
+  height: 150px;
+}

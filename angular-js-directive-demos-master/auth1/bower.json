@@ -1,0 +1,23 @@
+{
+  "name": "auth1",
+  "version": "0.0.0",
+  "authors": [
+    "Benjamin White <benjamin.e.white1@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.16",
+    "angular-route": "~1.3.16"
+  }
+}
