@@ -1,0 +1,97 @@
+
+body {
+  margin-left: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+h2{
+	font-size: 40px;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+h3{
+    font-size: 25px;
+    max-width: 87%;
+    margin: 30px auto 15px auto;
+}
+
+h3, 
+p{
+	font-family: 'Lato', sans-serif;
+	text-align: left;
+}
+p{
+	font-size: 18px;
+}
+
+input{
+	border: solid 2px;
+	padding: 3px;
+	font-weight: bold;
+}
+
+table{
+    display: inline-table;
+    width: 100%;
+  
+    padding-bottom: 60px;
+}
+
+.wrapper{
+	max-width: 650px;
+	text-align: center;
+	margin: 80px auto;
+}
+.wrapper p{
+    text-align: center;
+}
+
+.header{
+	width: 100%;
+	display: inline-block;
+	clear: both;
+   
+    box-sizing: border-box;
+}
+
+.logo{
+    border: solid 2px #000;
+    width: 140px;
+    display: inline-block;
+    float: left;
+    border-bottom: none;
+    border-right: solid 5px #000;
+    padding: 10px 0;
+
+}
+
+ 
+.error{
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+.geo__table{
+    max-height: 500px;
+    overflow-y: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.geo__table td{text-align: left;}
+
+.geo__table > tr:nth-child(odd) > td {
+   background-color: #f1f1f1;
+ }
+
+ tr.striped:nth-child(odd) {
+    background: #f1f1f1!important;
+ }
