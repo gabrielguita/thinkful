@@ -11,7 +11,7 @@
 	</tr> 
 	 
  	<tr class="striped" ng-repeat="data in customers | orderBy: countryName" ng-click="">
-		<td>  {{data.countryName}}  </td>
+		<td>{{data.countryName}}</td>
 	 	<td>{{data.countryCode}}</td>
 	 	<td>{{data.capital}}</td>
 	 	<td>{{data.areaInSqKm | number:0}}</td>
@@ -19,6 +19,6 @@
 	 	<td>{{data.continent}}</td>
 	</tr>
 </table> 
-
+	
 	<a class="btn btn-primary" href="../countries-and-capitals/#/">Home</a>
 </div>
