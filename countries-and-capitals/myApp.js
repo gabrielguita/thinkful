@@ -1,12 +1,12 @@
 angular.module('myApp', ['ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {  
-            templateUrl : 'home.html',
+            templateUrl : 'views/home.html',
             controller : 'HomeCtrl',
             controllerAs: 'vm'
         })
 		.when('/cities/:city', {
-		    templateUrl : 'dynamicDataCity.html',
+		    templateUrl : 'views/dynamicDataCity.html',
 		    controller : 'DynamicCityCtrl',
 		    controllerAs: 'vm',
 		    resolve : {
@@ -21,7 +21,7 @@ angular.module('myApp', ['ngRoute'])
 		    }
 		})
         .when('/countries', {
-            templateUrl : 'countries.html',
+            templateUrl : 'views/countries.html',
             controller : 'countriesCtrl',
             controllerAs: 'vm'
         })

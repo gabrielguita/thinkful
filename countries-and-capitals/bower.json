@@ -1,0 +1,16 @@
+{
+  "name": "countries-and-capitals",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gabrielguita/thinkful",
+  "authors": [
+    "Gabriel <ionut.guita@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
