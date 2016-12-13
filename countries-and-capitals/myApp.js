@@ -27,6 +27,7 @@ angular.module('myApp', ['ngRoute'])
         })
 		.otherwise('/home');
     }])
-    .config(['$httpProvider', function ($httpProvider) {
+	.config(['$httpProvider', function ($httpProvider) {
 		$httpProvider.defaults.cache = true;
-    }]);
+	}
+]);
