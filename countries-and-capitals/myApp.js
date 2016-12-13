@@ -27,51 +27,6 @@ angular.module('myApp', ['ngRoute'])
         })
 		.otherwise('/home');
     }])
-	.controller('DynamicCityCtrl', ['$scope', 'dataFactory', function($scope, $routeParams, dataFactory) {
-		console.log($routeParams);
-		$scope.templateUrl = $routeParams.name;
-	}]) 
-    .controller('countriesCtrl', ['$scope', 'dataFactory', function($scope, dataFactory) {
-
-		var vm = this;
-
-		$scope.customers;
-
-	    getCustomers();
-
-	    function getCustomers() {
-    		dataFactory.getCustomers()
-	            .then(function (response) {
-	                $scope.customers = response.data.geonames;
-	              
-	            }, function (error) {
-	                $scope.status = 'Unable to load customer data: ' + error.message;
-	            });
-	    }
-
-    }])
-    .controller('HomeCtrl', [function() {
-        //console.log('dasda');
-    }]) 
-     //  .service('dataService', ['$http', function ($http) {
-
-     //    var urlBase = 'http://api.geonames.org/countryInfoJSON?username=gabrielgi';
-
-     //    this.getCustomers = function () {
-     //        return $http.get(urlBase);
-     //    };
-     // }])
-     .factory('dataFactory', ['$http', function($http) {
-
-	    var urlBase = 'http://api.geonames.org/countryInfoJSON?username=gabrielgi';
-	    var dataFactory = {};
-
-	    dataFactory.getCustomers = function () {
-	        return $http.get(urlBase);
-	    };
- 
-    	return dataFactory;
-	}]) 
     .config(['$httpProvider', function ($httpProvider) {
 		$httpProvider.defaults.cache = true;
     }]);
