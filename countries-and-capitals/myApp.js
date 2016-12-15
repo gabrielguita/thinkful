@@ -8,18 +8,7 @@ angular.module('myApp', ['ngRoute'])
 		.when('/countries/:city', {
 		    templateUrl : 'views/dynamicDataCity.html',
 		    controller : 'DynamicCityCtrl',
-		    controllerAs: 'vm',
-		    resolve : {
-
-		        // city: function($route, $location) {
-		        //     //var city = $route.current.params.city;
-		        //     // if(owmCities.indexOf(city) === -1 ) {
-		        //     //     $location.path('/error');
-		        //     //     return;
-		        //     // }
-		        //     //return city;
-		        // }
-		    }
+		    controllerAs: 'vm'
 		})
         .when('/countries', {
             templateUrl : 'views/countries.html',
