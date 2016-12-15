@@ -5,19 +5,20 @@ angular.module('myApp', ['ngRoute'])
             controller : 'HomeCtrl',
             controllerAs: 'vm'
         })
-		.when('/cities/:city', {
+		.when('/countries/:city', {
 		    templateUrl : 'views/dynamicDataCity.html',
 		    controller : 'DynamicCityCtrl',
 		    controllerAs: 'vm',
 		    resolve : {
-		        city: function(owmCities, $route, $location) {
-		            var city = $route.current.params.city;
-		            if(owmCities.indexOf(city) === -1 ) {
-		                $location.path('/error');
-		                return;
-		            }
-		            return city;
-		        }
+
+		        // city: function($route, $location) {
+		        //     //var city = $route.current.params.city;
+		        //     // if(owmCities.indexOf(city) === -1 ) {
+		        //     //     $location.path('/error');
+		        //     //     return;
+		        //     // }
+		        //     //return city;
+		        // }
 		    }
 		})
         .when('/countries', {

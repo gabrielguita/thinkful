@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute'])
+angular.module('myApp')
 	.controller('countriesCtrl', ['$scope', 'dataFactory', function($scope, dataFactory) {
 
 		var vm = this;

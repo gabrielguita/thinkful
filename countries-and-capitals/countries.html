@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div ng-controller="countriesCtrl as vm" class="main_content"  >
+  <table class="table table-striped geo__table">
+	<tr class="info">
+		<th>Name</th>
+		<th>Country code</th>
+		<th>Capital</th>
+		<th>Area in km2</th>
+		<th>Population</th>
+		<th>Continent</th>		 
+	</tr> 
+	 
+ 	<tr class="striped" ng-repeat="data in customers | orderBy: countryName" ng-click="">
+		<td>  {{data.countryName}}  </td>
+	 	<td>{{data.countryCode}}</td>
+	 	<td>{{data.capital}}</td>
+	 	<td>{{data.areaInSqKm | number:0}}</td>
+	 	<td>{{data.population | number:0}}</td>
+	 	<td>{{data.continent}}</td>
+	</tr>
+</table> 
+
+	<a class="btn btn-primary" href="../countries-and-capitals/#/">Home</a>
+</div>
