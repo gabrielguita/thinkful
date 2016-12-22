@@ -1,6 +1,6 @@
 // Factory
 angular.module('myApp')
-	.factory('dataFactory', ['$http', function($http) {
+	.factory('dataFactory', ['$http', 'Country', function($http, Country) {
 
 	    var urlBase = 'http://api.geonames.org/countryInfoJSON?username=gabrielgi';
 	    var dataFactory = {};
@@ -10,8 +10,11 @@ angular.module('myApp')
         return this.getCustomersFromServer().then(function(response) {
         
           response.data.geonames.forEach(function(country){
-              pool[country.countryCode] = country;
+              var dataCountry = new Country(country);
+              pool[country.countryCode] = dataCountry;
           })
+
+          console.log(pool);
           
           return response;
         });
@@ -27,8 +30,6 @@ angular.module('myApp')
        dataFactory.getCustomersFromServer = function(){
             return $http.get(urlBase);     
        }
-
-
 
     	return dataFactory;
 	}]) 
