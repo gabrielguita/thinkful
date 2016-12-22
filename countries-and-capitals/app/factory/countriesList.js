@@ -23,6 +23,7 @@ angular.module('myApp')
  
       dataFactory.getCountry = function(value){
         console.log(pool);
+        
         if(pool[value])
         return pool[value];
       }
