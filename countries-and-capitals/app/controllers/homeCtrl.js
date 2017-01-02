@@ -1,3 +1,3 @@
-angular.module('myApp')
+angular.module('countriesApp')
 	.controller('HomeCtrl', [function() {
     }]);

@@ -96,5 +96,9 @@ table{
  tr.striped:nth-child(odd) {
     background: #f1f1f1!important;
  }
- 
 
+.single_country>tr > td{ 
+text-align: left;} 
+.single_country>tr > td:nth-of-type(odd){
+    text-align: right;
+}

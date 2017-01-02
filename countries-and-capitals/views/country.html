@@ -1,0 +1,33 @@
+<h1>Usa</h1>
+<table class="single_country">
+	<tr>
+		<td>Population of Country:</td>
+		<td>{{country.population}}</td>
+	</tr>
+	<tr>
+		<td>Area</td>
+		<td>{{country.countryName}}</td>
+	</tr>
+	<tr>
+		<td>Capital</td>
+		<td>{{country.capital}}</td>
+	</tr>
+	<tr>
+		<td>Population of Capital</td>
+		<td>{{country.population}}</td>
+	</tr>
+	<tr>
+		<td>3 neighbors</td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td><img id='myImage' src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png" /></td>
+		<td><img src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif" /></td>
+	</tr>
+
+</table>
+
+<button ng-click="save()">Save</button>
+
+	<a class="btn btn-primary" href="../countries-and-capitals/#/">Home</a>
+	<a class="btn btn-warning" ng-href="#/countries">Browse Countries</a>

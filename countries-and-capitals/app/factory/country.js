@@ -1,5 +1,5 @@
 // Factory
-angular.module('myApp')
+angular.module('countriesApp')
 	.factory('Country', ['$http', function($http) {
  		
  		function Country(data){
@@ -13,7 +13,6 @@ angular.module('myApp')
  		Country.prototype.save = function(){
  			console.log(this);
  		}
-
 
  		return Country;
 

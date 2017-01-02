@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div ng-controller="countriesCtrl as vm" class="main_content"  >
+  <div ng-controller="CountriesCtrl as vm" class="main_content"  >
   <table class="table table-striped geo__table">
 	<tr class="info">
 		<th>Name</th>
@@ -10,7 +10,7 @@
 		<th>Continent</th>		 
 	</tr> 
 	 
- 	<tr class="striped" ng-repeat="data in customers | orderBy: countryName" ng-click="">
+ 	<tr class="striped" ng-repeat="data in geonames | orderBy: countryName" ng-click="go(data.countryCode)">
 		<td>{{data.countryName}}</td>
 	 	<td>{{data.countryCode}}</td>
 	 	<td>{{data.capital}}</td>
