@@ -102,3 +102,7 @@ text-align: left;}
 .single_country>tr > td:nth-of-type(odd){
     text-align: right;
 }
+
+.country__flag img{
+    max-width: 200px;
+}

@@ -1,4 +1,4 @@
-<h1>Usa</h1>
+<h1>{{country.countryName}}</h1>
 <table class="single_country">
 	<tr>
 		<td>Population of Country:</td>
@@ -18,16 +18,16 @@
 	</tr>
 	<tr>
 		<td>3 neighbors</td>
-		<td> </td>
+		<td></td>
 	</tr>
 	<tr>
-		<td><img id='myImage' src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png" /></td>
-		<td><img src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif" /></td>
+		<td class="country__flag"><img id='myImage' src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png" /></td>
+		<td class="country__flag"><img src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif" /></td>
 	</tr>
 
 </table>
 
-<button ng-click="save()">Save</button>
+	<button ng-click="save()">Save</button>
 
 	<a class="btn btn-primary" href="../countries-and-capitals/#/">Home</a>
 	<a class="btn btn-warning" ng-href="#/countries">Browse Countries</a>

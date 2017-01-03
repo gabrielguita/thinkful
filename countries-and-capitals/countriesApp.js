@@ -1,7 +1,7 @@
 angular.module('countriesApp', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         
-        $stateProvider.state('home', {  
+        $stateProvider.state('/home', {  
             templateUrl : 'views/home.html',
             controller : 'HomeCtrl',
             controllerAs: 'vm',
@@ -19,7 +19,7 @@ angular.module('countriesApp', ['ui.router'])
             controllerAs: 'vm',
             url: '/countries'
         })
-        $urlRouterProvider.otherwise('/404');
+        $urlRouterProvider.otherwise('/home');
         console.log($stateProvider);
 
     }])
