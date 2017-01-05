@@ -1,6 +1,5 @@
 angular.module('countriesApp', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        
         $stateProvider.state('/home', {  
             templateUrl : 'views/home.html',
             controller : 'HomeCtrl',

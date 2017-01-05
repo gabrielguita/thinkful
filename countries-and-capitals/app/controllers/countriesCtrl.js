@@ -6,11 +6,8 @@ angular.module('countriesApp')
 	$scope.geonames;
 
     getGeonames();
-    
-	//console.log($state);
 
 	$scope.go = function (path) {
-		//console.log(path);
 		$state.go('country', {country: path});
 	};
 
