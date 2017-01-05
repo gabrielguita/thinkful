@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Jan 03 2017 23:12:16 GMT+0100 (CET)
+// Generated on Thu Jan 05 2017 20:09:17 GMT+0100 (CET)
 
 module.exports = function(config) {
   config.set({
@@ -15,6 +15,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        './node_modules/angular/angular.js',
+        './node_modules/angular-mocks/angular-mocks.js', 
+        './node_modules/angular-ui-router/release/angular-ui-router.js',
+        './app/countriesApp.js',       
+        './app/**/*.js',  
+        './app/controllers/*.spec.js'
     ],
 
 
@@ -63,6 +69,6 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+   // concurrency: Infinity
   })
 }
